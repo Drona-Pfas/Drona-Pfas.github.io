@@ -5,23 +5,14 @@ try {
   // ignore error
 }
 
-/** @type {import('next').NextConfig} */
+/** @type { import('next').NextConfig } */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  output: 'export',
   images: {
-    unoptimized: true,
+    unoptimized: true
   },
-  experimental: {
-    webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
-  },
-}
+  basePath: "/nextjs-github-pages"
+};
 
 mergeConfig(nextConfig, userConfig)
 
