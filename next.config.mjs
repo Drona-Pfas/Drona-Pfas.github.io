@@ -11,7 +11,7 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: "/nextjs-github-pages"
+  basePath: ""
 };
 
 mergeConfig(nextConfig, userConfig)
