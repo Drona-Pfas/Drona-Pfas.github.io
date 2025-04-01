@@ -132,17 +132,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section id="endorsements" className="w-full py-8 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#2563EB] text-center mb-6 shadow-text">Endorsements</h2>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {endorsements.map((endorsement, index) => (
-              <div key={index} className="w-40 h-20 relative">
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
     </div>
   )
 }
