@@ -33,11 +33,10 @@ const teamMembers: TeamMember[] = [
   }
 ];
 
-const endorsements = [
-  { name: "National University of Singapore", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-10%20at%202.56.37%E2%80%AFPM-32CStX5PhnHUFCanUDSsJ3GSsQFRmg.png" },
-  { name: "Agency for Science, Technology and Research Singapore", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-10%20at%202.56.58%E2%80%AFPM-NTTeDaD4GK2iTz43ajxt2aYUKmmuWu.png" },
-  { name: "PUB Singapore's National Water Agency", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-10%20at%202.57.09%E2%80%AFPM-l1nq0OhVjJA9njowfnKnIKZ6RrTJpI.png" },
-  { name: "Nanyang Technological University", logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-10%20at%202.56.30%E2%80%AFPM-3fWTeqG9gNgf82hhtokoW9nz3ZXrWf.png" },
+const achievements = [
+  { name: "Conrad Alternate Finalists", logo: "conrad.png" },
+  { name: "Endorsed by PUB Singapore's National Water Agency", logo: "pub.png" },
+  { name: "Provisional Patent Pending", logo: "patent.png" },
 ];
 
 export default function AboutUs() {
@@ -51,7 +50,7 @@ export default function AboutUs() {
               <div className="float-right ml-6 mb-4 w-full sm:w-3/4 md:w-3/5 lg:w-1/2">
                 <div className="relative aspect-[2/1.6] rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="map.png"
+                    src="/map.png"
                     alt="Global map of PFAS concentration in water showing the distribution of PFAS contamination across different regions"
                     fill
                     className="object-cover"
@@ -83,7 +82,7 @@ export default function AboutUs() {
               <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                 <div className="mb-6 relative w-72 h-72 mx-auto">
                   <Image
-                    src={member.imageUrl || "/placeholder.svg?height=300&width=300"}
+                    src={`/${member.imageUrl}` || "/placeholder.svg?height=300&width=300"}
                     alt={`${member.name}'s photo`}
                     fill
                     className="rounded-lg object-cover object-top"
@@ -105,7 +104,7 @@ export default function AboutUs() {
               <div className="float-left mr-6 mb-4 w-full sm:w-1/2 md:w-2/5 lg:w-1/3">
                 <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="vision.jpg"
+                    src="/vision.jpg"
                     alt="Photo with National Water Agency's Previous Deputy Chief Executive"
                     fill
                     className="object-cover"
@@ -132,8 +131,28 @@ export default function AboutUs() {
         </div>
       </section>
 
-
+      <section id="endorsements" className="w-full py-8 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#2563EB] text-center mb-6 shadow-text">Awards and Achievements</h2>
+          <div className="flex flex-wrap justify-center items-center gap-8">
+            {achievements.map((achievement, index) => (
+              <div key={index} className="flex flex-col items-center gap-2">
+                <div className="w-40 h-20 relative">
+                  <Image
+                    src={`/${achievement.logo}`}
+                    alt={`${achievement.name} logo`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-center text-sm text-gray-700 max-w-[160px]">
+                  {achievement.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
-

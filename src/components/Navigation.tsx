@@ -27,22 +27,8 @@ const navItems = {
       {
         title: "Our Drone",
         links: [
-          { name: "Model", href: "/meet-our-drone#model" },
           { name: "The Process", href: "/meet-our-drone#process" },
-        ],
-      },
-    ],
-  },
-  store: {
-    name: "Store",
-    href: "/store",
-    columns: [
-      {
-        title: "Our Services",
-        links: [
-          { name: "Subscriptions", href: "/store#subscriptions" },
-          { name: "Maintenance", href: "/store#maintenance" },
-          { name: "DronaData", href: "/store#dronadata" },
+          { name: "Model", href: "/meet-our-drone#model" },
         ],
       },
     ],
@@ -52,9 +38,9 @@ const navItems = {
     href: "/video",
     columns: [],
   },
-  support: {
-    name: "Support",
-    href: "/support",
+  contact: {
+    name: "Contact Us",
+    href: "/contact",
     columns: [],
   },
 }

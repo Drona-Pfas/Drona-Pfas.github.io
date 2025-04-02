@@ -16,9 +16,9 @@ const formSchema = z.object({
 })
 
 const services = [
-  { id: "subscriptions", label: "Subscriptions" },
-  { id: "maintenance", label: "Maintenance" },
-  { id: "dronadata", label: "DronaData" },
+  { id: "business", label: "Business" },
+  { id: "inquiry", label: "General Inquiry" },
+  { id: "research", label: "Research" },
   { id: "other", label: "Other" },
 ]
 
@@ -90,10 +90,10 @@ export default function Support() {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea 
-                          placeholder="Enter your message here (max 100 words)" 
-                          className="resize-none" 
-                          {...field} 
+                        <Textarea
+                          placeholder="Enter your message here (max 100 words)"
+                          className="resize-none"
+                          {...field}
                         />
                       </FormControl>
                       <FormDescription>
